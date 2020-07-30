@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+	<bean id="con1" class="com.wp.handson5.Country">
+		<property name="countryId" value="C001"/>
+		<property name="countryName" value="India"/>
+	</bean>
+	<bean id="con2" class="com.wp.handson5.Country">
+		<property name="countryId" value="C002"/>
+		<property name="countryName" value="Australia"/>
+	</bean>
+	
+	<bean id="ply1" class="com.wp.handson5.Player">
+		<property name="playerId" value="P001"/>
+		<property name="playerName" value="M.S. Dhoni"/>
+		<property name="country" ref="con1"/>
+	</bean>
+	<bean id="ply2" class="com.wp.handson5.Player">
+		<property name="playerId" value="P002"/>
+		<property name="playerName" value="Virat Kohli"/>
+		<property name="country" ref="con1"/>
+	</bean>
+	<bean id="ply3" class="com.wp.handson5.Player">
+		<property name="playerId" value="P003"/>
+		<property name="playerName" value="Ravindra Jadeja"/>
+		<property name="country" ref="con1"/>
+	</bean>
+	<bean id="ply4" class="com.wp.handson5.Player">
+		<property name="playerId" value="P004"/>
+		<property name="playerName" value="Steve Smith"/>
+		<property name="country" ref="con2"/>
+	</bean>
+	<bean id="ply5" class="com.wp.handson5.Player">
+		<property name="playerId" value="P005"/>
+		<property name="playerName" value="Shane Watson"/>
+		<property name="country" ref="con2"/>
+	</bean>
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+	<bean id="test1" class="com.wp.handson4.Test">
+		<property name="testId" value="T001"/>
+		<property name="testName" value="Core Java Test"/>
+		<property name="testMarks" value="80"/>
+	</bean>
+	<bean id="test2" class="com.wp.handson4.Test">
+		<property name="testId" value="T002"/>
+		<property name="testName" value="Oracle Test"/>
+		<property name="testMarks" value="83"/>
+	</bean>
+	<bean id="test3" class="com.wp.handson4.Test">
+		<property name="testId" value="T003"/>
+		<property name="testName" value="Maths Test"/>
+		<property name="testMarks" value="67"/>
+	</bean>
+	
+	<bean id="stud1" class="com.wp.handson4.Student">
+		<property name="StudentId" value="S001"/>
+		<property name="studentName" value="Steve"/>
+		<property name="studentTest" ref="test1"/>
+	</bean>
+	<bean id="stud2" class="com.wp.handson4.Student">
+		<property name="studentId" value="S002"/>
+		<property name="studentName" value="Mark"/>
+		<property name="studentTest" ref="test2"/>
+	</bean>
+	<bean id="stud3" class="com.wp.handson4.Student">
+		<property name="studentId" value="S003"/>
+		<property name="studentName" value="Susan"/>
+		<property name="studentTest" ref="test3"/>
+	</bean>
+</beans>
